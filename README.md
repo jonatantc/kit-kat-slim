@@ -3,7 +3,7 @@ A fork of the Mega 3DS Toolkit Chain by http://twitter.com/Pr4gma
 Featuring a Slick UI & the Ability to Control You Touchscreen while Streaming with NTRViewer.exe
 
 # Mouse Control Touchscreen Feature in Action (using Vitrite.exe)
-<a href="http://imgur.com/A0sfR4e"><img src="http://i.imgur.com/A0sfR4e.gif" title="source: imgur.com" /></a>
+(http://i.imgur.com/A0sfR4e.gif)
 
 # kit-kat-touch Download
 
