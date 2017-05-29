@@ -1,19 +1,36 @@
-# kit-kat
-MEGA toolkit chain with many useful features like Streaming, Pushing files to the 3DS wirelessly, Input Redirection, HostedNetwork Automation, And many many more.
+# kit-kat-touch
+A fork of the Mega 3DS Toolkit Chain by http://twitter,com/Pr4gma
+Featuring a Slick UI & the Ability to Control You Touchscreen while Streaming with NTRViewer.exe
 
-## Old Screenshot
-![Screenshot](http://i.imgur.com/oGb3VcE.gif)
+# Mouse Control Touchscreen Feature in Action (using Vitrite.exe)
+![Screenshot](http://i.imgur.com/A0sfR4e.gif)
 
-# Download
+# kit-kat-touch Download
+
+
+# Orginial kit-kat Download
 https://github.com/initPRAGMA/kit-kat/releases/latest
 
 # Dependencies
 NONE! At all! Just kit-kat.exe!
 
 # Usage
-- On your 3DS -> Boot NTR Selector -> Wait until its back to the Home menu.
-- On kit-kat -> Hit Connect -> Give it a few seconds and Voila!
-(It might take a few seconds for kit-kat to detect the 3DS IP Address).
+- On your 3DS -> InputProc -> Boot NTR Selector -> Wait until its back to the Home menu.
+- On kit-kat -> Enter 3DS IP Address 
+- Open Controller Tab -> Wait for InputRedirection Client to Load -> Press ESC -> Press f4 -> OK
+- On Connect Tab -> Hit Connect -> Give it a few seconds to Open NtrViewer.exe
+- Hover the Touchscreen over Ntrviewer's Touchscreen
+- Load Vitrite.exe -> Press Cntrl+Shift+1 to Turn kit-kat-touch.exe Transparant
+
+Clicks now Register on NtrViewer.exe as Physical Touchscreen Input!
+
+Use Joy2Key to Map a Gamepad's Right Control Stick to your Mouse Controls = Full Gamepad Control over your 3DS (minus c-Stick)
 
 # License
 GPLV2
+
+# Thank You's
+- stary2001
+- kazo
+- pragma
+- cell9
