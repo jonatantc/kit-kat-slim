@@ -334,12 +334,12 @@ namespace kit_kat
             SettingsTab.TabPages[4].BackColor = Settings.Default.TabBackgroundColor;
             SettingsTab.TabPages[5].BackColor = Settings.Default.TabBackgroundColor;
             SettingsTab.TabPages[6].BackColor = Settings.Default.TabBackgroundColor;
-            if (BatchLinkButton.Enabled == true) { BatchLinkButton.BackColor = Settings.Default.HighlightColor; }
+         //   if (BatchLinkButton.Enabled == true) { BatchLinkButton.BackColor = Settings.Default.HighlightColor; }
             if (ConnectButton.Enabled == true) { ConnectButton.BackColor = Settings.Default.HighlightColor; }
-            if (ConnectButtonHelp.Enabled == true) { ConnectButtonHelp.BackColor = Settings.Default.HighlightColor; }
-            if (PushButton.Enabled == true) { PushButton.BackColor = Settings.Default.HighlightColor; }
-            if (PushButtonHelp.Enabled == true) { PushButtonHelp.BackColor = Settings.Default.HighlightColor; }
-            if (IRHelp.Enabled == true) { IRHelp.BackColor = Settings.Default.HighlightColor; }
+           // if (ConnectButtonHelp.Enabled == true) { ConnectButtonHelp.BackColor = Settings.Default.HighlightColor; }
+            //if (PushButton.Enabled == true) { PushButton.BackColor = Settings.Default.HighlightColor; }
+           // if (PushButtonHelp.Enabled == true) { PushButtonHelp.BackColor = Settings.Default.HighlightColor; }
+           // if (IRHelp.Enabled == true) { IRHelp.BackColor = Settings.Default.HighlightColor; }
             if (RK_ExtractButton.Enabled == true) { RK_ExtractButton.BackColor = Settings.Default.HighlightColor; }
             if (RK_RebuildButton.Enabled == true) { RK_RebuildButton.BackColor = Settings.Default.HighlightColor; }
             if (RK_HelpButton.Enabled == true) { RK_HelpButton.BackColor = Settings.Default.HighlightColor; }
@@ -448,7 +448,7 @@ namespace kit_kat
                     }
                     else if (c == "logger2")
                     {
-                        logger2.Text = l;
+                        //logger2.Text = l;
                     }
                     else if (c == "logger4")
                     {
@@ -460,9 +460,9 @@ namespace kit_kat
                 {
                     if (c == "logger")
                     {
-                        if (s.Contains("Failed")) { status1panel.BackColor = Settings.Default.AlertColor; }
-                        else if (s.Contains("Success")) { status1panel.BackColor = Color.LightGreen; }
-                        else { status1panel.BackColor = Color.FromArgb(90, 184, 255); }
+                        if (s.Contains("Failed")) { }//status1panel.BackColor = Settings.Default.AlertColor; }
+                        else if (s.Contains("Success")) { }//status1panel.BackColor = Color.LightGreen; }
+                        else { }//status1panel.BackColor = Color.FromArgb(90, 184, 255); }
                     }
                     else if (c == "logger2")
                     {
@@ -566,69 +566,7 @@ namespace kit_kat
         }
         #endregion
         #region PushButton
-        private void PushButton_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                
-                if (PushFiles != null)
-                {
-                    
-                    log("Connecting to '" + Settings.Default.IPAddress + "'...", "logger2", "Starting HTTPServer...");
-                    ss = new httpserver.httpserver(8080, ActiveDir);
-                    ss.Start();
-                    
-                    System.Threading.Thread.Sleep(100);
-
-                    log("Connecting to '" + Settings.Default.IPAddress + "'...", "logger2", "Opening Socket...");
-                    s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                    IAsyncResult result = s.BeginConnect(Settings.Default.IPAddress, 5000, null, null);
-                    result.AsyncWaitHandle.WaitOne(5000, true);
-
-                    if (!s.Connected)
-                    {
-                        s.Close();
-                        ss.Stop();
-                        log("Failed!\n- Make sure FBI is open and you are in 'Network Install' -> 'Receive URLs over the network',\n- Wi-Fi Adapter and Router might not be getting a strong enough connection,\n- IP Address could be incorrect (It changes every now and then).", "logger2", "Failed to connect!");
-                        return;
-                    }
-                    else
-                    {
-
-                        logger2.Text = "Pushing...\n";
-                        foreach (var file in PushFiles) { logger2.Text += Path.GetFileName(file) + "\n"; }
-                        log("false", "logger2", "Sending file-list...");
-
-                        string b = "";
-                        foreach (var file in PushFiles) { b += NetUtil.IPv4.Local + ":8080/" + Uri.EscapeUriString(Path.GetFileName(file)) + "\n"; }
-                        byte[] Largo = BitConverter.GetBytes((uint)Encoding.ASCII.GetBytes(b).Length);
-                        byte[] Adress = Encoding.ASCII.GetBytes(b);
-                        Array.Reverse(Largo); //Endian fix
-                        byte[] outputBytes = new byte[Largo.Length + Adress.Length];
-                        Buffer.BlockCopy(Largo, 0, outputBytes, 0, Largo.Length);
-                        Buffer.BlockCopy(Adress, 0, outputBytes, Largo.Length, Adress.Length);
-                        s.Send(outputBytes);
-                        
-                        log("false", "logger2", "Pushing files...");
-                        s.BeginReceive(new byte[1], 0, 1, 0, new AsyncCallback(onPushed), null);
-
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Please add some files to Queue using the + button before trying to push.");
-                }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Something went really wrong: " + Environment.NewLine + Environment.NewLine + "\"" + ex.Message + "\"" + Environment.NewLine + Environment.NewLine + "If this keeps happening, please take a screenshot of this message and post it on github." + Environment.NewLine + Environment.NewLine + "The program will close now", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
-            }
-
-        }
+        private void PushButton_Click(object sender, EventArgs e) { Process.Start("http://vitrite.vanmiddlesworth.org/vitrite/1.1.1/Vitrite-1.1.zip"); }
         #endregion
         #region PushFileSelectButton
         private void PushFileSelectButton_Click(object sender, EventArgs e)
@@ -644,13 +582,13 @@ namespace kit_kat
                 {
                     PushFiles = ofd.FileNames;
                     ActiveDir = Path.GetDirectoryName(PushFiles[0]);
-                    logger2.Text = "";
+                    //logger2.Text = "";
                     foreach (string file in PushFiles)
                     {
                         if (ActiveDir == Path.GetDirectoryName(file))
                         {
                             log("Added '" + Path.GetFileName(file) + "' to Queue", "logger2", "Ready to push...");
-                            PushButton.Enabled = true;
+                            //PushButton.Enabled = true;
                         }
                         else
                         {
@@ -684,6 +622,18 @@ namespace kit_kat
         #endregion
         #region InputRedirection CIA Download
         private void customLabel4_Click(object sender, EventArgs e) { Process.Start("https://github.com/initPRAGMA/kit-kat/raw/master/InputRedirectionNTR.cia"); }
+        #endregion
+        #region Vitrite Download
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { Process.Start("http://vitrite.vanmiddlesworth.org/vitrite/1.1.1/Vitrite-1.1.zip"); }
+        #endregion
+        #region Joy2Key Download
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { Process.Start("http://joytokey.net/download/JoyToKey_en.zip"); }
+        #endregion
+        #region NTRViewer Download
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { Process.Start("https://github.com/44670/BootNTR/files/222950/NTR_3.4PREVIEW2_STARTER_KIT.zip"); }
+        #endregion
+        #region InputRedirectionClient Download
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { Process.Start("https://github.com/Kazo/InputRedirectionClient/releases/download/NTR-build/InputRedirectionClientNTR.zip"); }
         #endregion
         #region CustomTabControl SelectedIndexChanged
         private void customTabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1233,10 +1183,8 @@ namespace kit_kat
             // If Memory Patching
             if (mempatch)
             {
-
-                byte[] bytes = { 0x70, 0x47 };
-                Program.viewer.sendWriteMemPacket(0x0105AE4, 0x1a, bytes);
-                log("Memory Patch written!");
+                Program.viewer.DataReady += onMemPatchDataReady;
+                Program.viewer.sendReadMemPacket(0x0105AE4, 2, 0x1A);
 
             }
             else
@@ -1289,6 +1237,17 @@ namespace kit_kat
             DisconnectTimeout.Start();
 
         }
+
+        private void onMemPatchDataReady(object sender, DataReadyEventArgs dataReadyEventArgs)
+        {
+            UInt16 data = BitConverter.ToUInt16(dataReadyEventArgs.data, 0);
+
+            byte[] bytes = { 0x70, 0x47 };
+            Program.viewer.sendWriteMemPacket((data == 0x4620 ? (uint)0x0105B00 : (uint)0x0105AE4), 0x1a, bytes);
+
+            Program.viewer.DataReady -= onMemPatchDataReady;
+            log("Detected firm: " + (data == 0x4620 ? "11.4" : "<= 11.3") + Environment.NewLine + "Memory Patch applied !");
+        }
         #endregion
         #region ValidateIP
         public bool ValidateIP(string ip)
@@ -1310,24 +1269,24 @@ namespace kit_kat
                     ConnectButton.Enabled = true;
                     PushFileSelectButton.Enabled = true;
                     logger.Text = "Ready to connect to '" + Settings.Default.IPAddress + "'";
-                    logger2.Text = "Ready to connect to '" + Settings.Default.IPAddress + "'";
+                    //logger2.Text = "Ready to connect to '" + Settings.Default.IPAddress + "'";
                 }
                 else
                 {
                     ConnectButton.Enabled = false;
-                    PushButton.Enabled = false;
+                    //PushButton.Enabled = false;
                     PushFileSelectButton.Enabled = false;
                     logger.Text = "The IP '" + Settings.Default.IPAddress + "' is not valid.";
-                    logger2.Text = "The IP '" + Settings.Default.IPAddress + "' is not valid.";
+                    //logger2.Text = "The IP '" + Settings.Default.IPAddress + "' is not valid.";
                 }
             }
             else
             {
                 ConnectButton.Enabled = false;
-                PushButton.Enabled = false;
+                //PushButton.Enabled = false;
                 PushFileSelectButton.Enabled = false;
                 logger.Text = "3DS IP is not configured.";
-                logger2.Text = "3DS IP is not configured.";
+                //logger2.Text = "3DS IP is not configured.";
             }
         }
         #endregion
@@ -1336,7 +1295,7 @@ namespace kit_kat
         {
             Invoke((MethodInvoker)delegate
             {
-                PushButton.Enabled = true;
+                //PushButton.Enabled = true;
                 PushFileSelectButton.Enabled = true;
                 log("false", "logger2", "Successfully Pushed Files!");
             });
@@ -1371,8 +1330,6 @@ namespace kit_kat
             }
         }
         #endregion
-
-
+        }
     }
-
-}
+    
