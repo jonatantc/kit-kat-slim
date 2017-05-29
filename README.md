@@ -6,7 +6,7 @@ Featuring a Slick UI & the Ability to Control You Touchscreen while Streaming wi
 ![Demo](https://github.com/gameincanada/kit-kat/blob/master/kit-kat-touch.gif)
 
 # kit-kat-touch Download
-
+https://github.com/gameincanada/kit-kat-touch/releases
 
 # Orginial kit-kat Download
 https://github.com/initPRAGMA/kit-kat/releases/latest
