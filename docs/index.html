@@ -2,6 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<script type="text/javascript">
+function showSpoiler(obj)
+    {
+    var inner = obj.parentNode.getElementsByTagName("div")[0];
+    if (inner.style.display == "none")
+        inner.style.display = "";
+    else
+        inner.style.display = "none";
+    }
+    </script>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>kit-kat-touch - Control Your 3DS like Never Before</title>
 <style type="text/css">
@@ -25,11 +35,6 @@
 	text-align: left;
 	font-size: large;
 }
-.auto-style7 {
-	text-align: left;
-	font-family: "(Default Font)-apple-system", BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: large;
-}
 .auto-style12 {
 	font-size: x-small;
 	font-family: Dungeon;
@@ -38,11 +43,9 @@
 	color: #FFFFFF;
 	background-color: #000000;
 }
-.auto-style10 {
-	font-size: small;
-}
-.auto-style14 {
-	color: rgb(0, 0, 0);
+.auto-style15 {
+	text-align: left;
+	font-size: 20pt;
 }
 </style>
 </head>
@@ -78,37 +81,37 @@
 		<br />
 	</div>
 	<hr />
-	<br />
+	<strong>Logo:<br />
+	</strong>
 	</div>
 <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
-<tr><td style="text-align: center;">
-	<img height="264" src="pg3/kit-kat-touch%20logo354.png" width="320" /></td></tr>
+<tr><td class="auto-style1">
+	&nbsp;<img height="264" src="pg3/kit-kat-touch%20logo354.png" width="320" /></td></tr>
 <tr><td class="tr-caption" style="text-align: center;">&nbsp;</td></tr>
 </tbody></table>
 	<hr />
 	<div class="auto-style2">
+		<strong><br />
+		User Interface:</strong><br />
 		<br />
-		<img alt="" height="240" src="175.gif" width="691" style="float: left" /><br />
-		<br /><br />
+		<img alt="" height="240" src="175.gif" width="691" style="float: right" /><br />
+		<hr /><br />
 	</div>
 	<div class="auto-style1">
 		<div class="auto-style1">
-<b><br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<hr />60s GIF Demo:<br />
-			<br />
-		</b>&nbsp;<a href="http://imgur.com/A0sfR4e"><img height="370" src="https://i.imgur.com/A0sfR4e.gif" title="source: imgur.com" width="571" /></a><br />
+			<b>
+			<div class="spoiler">
+    <input type="button" onclick="showSpoiler(this);" value="Show/Hide Demo" /><br />
+				<br />
+&nbsp;<div class="inner" style="display:none;">
+    </b>&nbsp;<img height="370" src="https://i.imgur.com/A0sfR4e.gif" title="source: imgur.com" width="571" /><br />
 		</div>
-		<h1 class="auto-style2" style="box-sizing: border-box; font-size: 2em; margin: 24px 0px 16px; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid rgb(234, 236, 239); color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
-		How to Setup</h1>
+				<br />
+				<br />
+				<br />
+				<hr style="height: 18px" />
+		<h1 class="auto-style15" style="box-sizing: border-box; margin: 24px 0px 16px; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid rgb(234, 236, 239); color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+		How to Setup (part 1) - BootNTR &amp; InputProc Installation</h1>
 		<p class="auto-style6" style="box-sizing: border-box; margin: 24px 0px 16px; font-weight: 600; line-height: 1.25; padding-bottom: 0.3em; border-bottom: 1px solid rgb(234, 236, 239); color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
 		<b><strong>On your 3DS</strong></b>:</p>
 		<ul style="box-sizing: border-box; padding-left: 2em; margin-top: 0px; margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
@@ -131,7 +134,10 @@
 		<p>
 		<img height="238" src="197.gif" width="321" /></p>
 		<hr />
-		<p>
+				<ul>
+					<li class="auto-style2">Do the same for <strong>InputProc</strong></li>
+				</ul>
+				<p>
 		<img height="477" src="198.gif" width="399" /></p>
 		<hr />
 		<ul>
@@ -152,70 +158,23 @@
 		</ul>
 		<p>You must Open <strong><em>"InputProc"</em></strong> and <strong><em>
 		"BootNTR Selector"</em></strong> <span class="auto-style5"><strong>
-		everytime you restart</strong></span> your <strong>n3DS</strong></p>
-		<hr />
-		<p class="auto-style7">On <strong>kit-kat-touch.exe</strong></p>
-		<ul>
-			<li class="auto-style2">Enter <strong>3DS IP Address</strong></li>
-		</ul>
-		<p><img alt="" height="237" src="202.gif" width="686" /></p>
-		<hr />
-		<ul>
-			<li class="auto-style2">Open the <strong>Controller Tab </strong>-&gt; Wait for 
-			<strong>InputRedirection Client</strong> <span class="auto-style5">to Load</span></li>
-		</ul>
-		<p><img alt="" height="243" src="203.gif" width="689" /></p>
-		<ul>
-			<li class="auto-style2"><strong>Press ESC</strong> -&gt; <strong>Press f4</strong> -&gt; 
-			<strong>OK <span class="auto-style10">(to remove the numbers)</span></strong></li>
-		</ul>
-		<p><img alt="" height="241" src="205.gif" width="685" /></p>
-		<hr />
-		<ul>
-			<li class="auto-style2" style="box-sizing: border-box; margin-top: 0.25em;">On 
-			<strong>Connect Tab</strong> -&gt; <strong>Click "Connect Button"</strong> -&gt; Give it a few seconds to Open 
-			<strong>NtrViewer.exe</strong></li>
-		</ul>
-		<p><img alt="" height="237" src="206.gif" width="689" /></p>
-		<ul>
-			<li class="auto-style2" style="box-sizing: border-box; margin-top: 0.25em;">
-			Move <strong>kit-kat-touch</strong> by clicking the program title
-			<strong>(kit-kat-touch above Connect)</strong> &amp;
-			<span class="auto-style5">Hover the</span><strong><span class="auto-style5"> Touchscreen</span>
-			</strong><em>over</em><strong> Ntrviewer's</strong> <strong>Touchscreen 
-			Stream</strong></li>
-		</ul>
-		<p><img alt="" height="447" src="169.gif" width="602" /></p>
-		<hr />
-		<ul>
-			<li class="auto-style2" style="box-sizing: border-box; margin-top: 0.25em;">
-			<strong>Download "Vitrite.zip" from the Download tab in 
-			kit-kat-touch </strong></li>
-		</ul>
-		<p><img alt="" height="243" src="177.gif" width="691" /></p>
-		<ul>
-			<li class="auto-style2" style="box-sizing: border-box; margin-top: 0.25em;">
-			<span class="auto-style5">Extract &amp;
-			Load</span> <strong>Vitrite.exe</strong> -&gt; Press <strong>Cntrl+Shift+1</strong> 
-			to change <strong>kit-kat-touch.exe</strong> <em>Transparent 
-			(cntrl+shft+0 to return to normal)</em></li>
-		</ul>
-		<p><img alt="" height="494" src="170.gif" width="648" /></p>
-		<p class="auto-style2" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
-		<strong><em>Clicks </em></strong>now <span class="auto-style5">Register on 
-		<strong>NtrViewer.exe</strong></span> as <strong>Physical Touchscreen Input!</strong></p>
-		<p class="auto-style2" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
-		&nbsp;</p>
+		everytime you restart</strong></span> your <strong>n3DS &amp; want to use 
+		kit-kat</strong></p>
+				<hr style="height: 10px" />
 		<p class="auto-style2" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
 		<span class="auto-style14">Continue to:</span> <a href="pg3.html">
-		<strong><em>Setting Up</em></strong> <strong>Joy2Key </strong>for
-		<strong><em><span class="auto-style5">Gamepad to Mouse Input (pt3)</span></em></strong></a></p>
-	</div>
-</b><hr />
-	<div class="auto-style2">
+		<strong><em>Setting Up</em></strong> <strong>kit-kat-touch<em><span class="auto-style5"> (part 
+		2)</span></em></strong></a></p>
+				<p class="auto-style2" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 16px; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;">
+				<em><strong><a href="index.html">Return to the Homepage</a></strong></em></p>
+		<hr style="height: 10px" />
+		<div class="auto-style2">
+			<div class="auto-style2">
 		Checkout Pragma @:<br />
 	<a href="http://www.twitter.com/pr4gma">http://www.twitter.com/pr4gma</a><br />
 	<a href="https://github.com/initPRAGMA/kit-kat/releases">
 	https://github.com/initPRAGMA/kit-kat/releases</a></div>
 </div>
-<p>Follow Me @: <a href="http://www.nintend.news">http://www.nintend.news</a><p><a href="http://www.n3ds.info">http://www.n3ds.info</a></p>
+<p>Ryan VanMiddlesworth@: <a href="http://vanmiddlesworth.org/vitrite/">
+http://vanmiddlesworth.org/vitrite/</a><p>For all things GameInCanada related 
+Visit: <a href="http://www.nintend.news">http://www.nintend.news</a>
