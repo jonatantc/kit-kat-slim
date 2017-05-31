@@ -1,22 +1,28 @@
 # kit-kat-touch
 ![Logo](https://github.com/gameincanada/kit-kat-touch/blob/master/kit-kat-touch%20logo354.png?raw=true)
 
+Homepage Here: http://bit.ly/2rm2uy5
+
 A fork of the Mega 3DS Toolkit Chain by: http://twitter.com/Pr4gma
 
 Featuring a Slick UI & the Ability to Control Your Touchscreen while Streaming with NTRViewer.exe
 
 # Mouse Control Touchscreen Feature in Action (using Vitrite.exe)
-![Demo](https://github.com/gameincanada/kit-kat/blob/master/kit-kat-touch.gif)
+![Demo](https://gameincanada.github.io/kit-kat-touch/pg3/ezgif.com-optimize.gif)
 
 # kit-kat-touch Download
 https://github.com/gameincanada/kit-kat-touch/releases
 
-# Orginial kit-kat Download
-https://github.com/initPRAGMA/kit-kat/releases/latest
-
 # Dependencies
-NONE! At all! Just kit-kat.exe!
+Click the Downloads Tab in kit-kat-touch.exe
+Download and Extract the following to kit-kat-touch.exe Directory
+- NTRViewer Folder + Contents (inside NTR_STARTERKIT.zip)
+- InputRedirection Client.zip Contents
+- Joy2Key.zip Contents 
+- Vitrite.zip Contents
 
+
+# Full Tutorial: http://bit.ly/2rm2uy5
 # Usage
 - On your 3DS -> InputProc -> Boot NTR Selector -> Wait until its back to the Home menu.
 - On kit-kat -> Enter 3DS IP Address 
@@ -37,3 +43,4 @@ GPLV2
 - kazo
 - pragma
 - cell9
+- nanquitas
