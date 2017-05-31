@@ -43,6 +43,9 @@
             this.ConnectButton = new kit_kat.MaterialButton();
             this.MemPatchButton = new kit_kat.MaterialButton();
             this.Push = new System.Windows.Forms.TabPage();
+            this.RK_HelpButton = new kit_kat.MaterialButton();
+            this.customLabel4 = new kit_kat.CustomLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -56,12 +59,9 @@
             this.customLabel3 = new kit_kat.CustomLabel();
             this.RomKit = new System.Windows.Forms.TabPage();
             this.RK_ExtractButton = new kit_kat.MaterialButton();
-            this.customLabel11 = new kit_kat.CustomLabel();
             this.RK_RebuildButton = new kit_kat.MaterialButton();
             this.logger4 = new kit_kat.CustomLabel();
             this.status4panel = new System.Windows.Forms.Panel();
-            this.RK_HelpButton = new kit_kat.MaterialButton();
-            this.separator3 = new kit_kat.Separator();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.SettingsWindow = new System.Windows.Forms.Panel();
             this.SettingsTab = new kit_kat.cTabControl();
@@ -123,8 +123,8 @@
             this.Hidden5 = new System.Windows.Forms.TabPage();
             this.Hidden6 = new System.Windows.Forms.TabPage();
             this.Hidden7 = new System.Windows.Forms.TabPage();
+            this.separator3 = new kit_kat.Separator();
             this.pctSurface = new System.Windows.Forms.PictureBox();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.MainTab.SuspendLayout();
             this.CaptureCard.SuspendLayout();
             this.Push.SuspendLayout();
@@ -246,7 +246,7 @@
             this.CaptureCard.Location = new System.Drawing.Point(0, 2);
             this.CaptureCard.Name = "CaptureCard";
             this.CaptureCard.Padding = new System.Windows.Forms.Padding(3);
-            this.CaptureCard.Size = new System.Drawing.Size(338, 297);
+            this.CaptureCard.Size = new System.Drawing.Size(332, 297);
             this.CaptureCard.TabIndex = 0;
             this.CaptureCard.Text = "tabPage1";
             // 
@@ -282,7 +282,7 @@
             this.MemPatchButton.Location = new System.Drawing.Point(267, 34);
             this.MemPatchButton.Margin = new System.Windows.Forms.Padding(0);
             this.MemPatchButton.Name = "MemPatchButton";
-            this.MemPatchButton.Size = new System.Drawing.Size(65, 31);
+            this.MemPatchButton.Size = new System.Drawing.Size(62, 31);
             this.MemPatchButton.TabIndex = 5;
             this.MemPatchButton.Tag = "Alert";
             this.MemPatchButton.Text = "⚠";
@@ -292,6 +292,8 @@
             // Push
             // 
             this.Push.BackColor = System.Drawing.Color.White;
+            this.Push.Controls.Add(this.RK_HelpButton);
+            this.Push.Controls.Add(this.customLabel4);
             this.Push.Controls.Add(this.linkLabel4);
             this.Push.Controls.Add(this.linkLabel3);
             this.Push.Controls.Add(this.linkLabel2);
@@ -306,10 +308,54 @@
             this.Push.Location = new System.Drawing.Point(0, 2);
             this.Push.Name = "Push";
             this.Push.Padding = new System.Windows.Forms.Padding(3);
-            this.Push.Size = new System.Drawing.Size(338, 297);
+            this.Push.Size = new System.Drawing.Size(332, 297);
             this.Push.TabIndex = 2;
             this.Push.Tag = "";
             this.Push.Text = "tabPage2";
+            // 
+            // RK_HelpButton
+            // 
+            this.RK_HelpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
+            this.RK_HelpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RK_HelpButton.Font = new System.Drawing.Font("Segoe UI Symbol", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RK_HelpButton.ForeColor = System.Drawing.Color.White;
+            this.RK_HelpButton.Location = new System.Drawing.Point(34, 192);
+            this.RK_HelpButton.Margin = new System.Windows.Forms.Padding(0);
+            this.RK_HelpButton.Name = "RK_HelpButton";
+            this.RK_HelpButton.Size = new System.Drawing.Size(259, 40);
+            this.RK_HelpButton.TabIndex = 8;
+            this.RK_HelpButton.Tag = "";
+            this.RK_HelpButton.Text = "Tutorial";
+            this.RK_HelpButton.UseVisualStyleBackColor = false;
+            this.RK_HelpButton.Click += new System.EventHandler(this.RK_HelpButton_Click);
+            // 
+            // customLabel4
+            // 
+            this.customLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.customLabel4.ForeColor = System.Drawing.Color.Black;
+            this.customLabel4.Location = new System.Drawing.Point(34, 141);
+            this.customLabel4.Name = "customLabel4";
+            this.customLabel4.Size = new System.Drawing.Size(259, 51);
+            this.customLabel4.TabIndex = 29;
+            this.customLabel4.Tag = "Left";
+            this.customLabel4.Text = "Extract all \r\nto kit-kat-touch.exe Directory";
+            this.customLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.linkLabel4.LinkColor = System.Drawing.Color.DarkTurquoise;
+            this.linkLabel4.Location = new System.Drawing.Point(67, 121);
+            this.linkLabel4.MinimumSize = new System.Drawing.Size(0, 6);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(208, 15);
+            this.linkLabel4.TabIndex = 28;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "InputRedirection Client by Kazo";
+            this.linkLabel4.VisitedLinkColor = System.Drawing.Color.Teal;
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -317,7 +363,7 @@
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.linkLabel3.LinkColor = System.Drawing.Color.DarkTurquoise;
-            this.linkLabel3.Location = new System.Drawing.Point(42, 150);
+            this.linkLabel3.Location = new System.Drawing.Point(67, 92);
             this.linkLabel3.MinimumSize = new System.Drawing.Size(0, 6);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(146, 15);
@@ -333,13 +379,14 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.linkLabel2.LinkColor = System.Drawing.Color.DarkTurquoise;
-            this.linkLabel2.Location = new System.Drawing.Point(42, 109);
+            this.linkLabel2.Location = new System.Drawing.Point(67, 64);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(140, 15);
             this.linkLabel2.TabIndex = 26;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Joy2Key by JTKSOFT";
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Teal;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -347,7 +394,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.linkLabel1.LinkColor = System.Drawing.Color.DarkTurquoise;
-            this.linkLabel1.Location = new System.Drawing.Point(42, 70);
+            this.linkLabel1.Location = new System.Drawing.Point(67, 37);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(212, 15);
             this.linkLabel1.TabIndex = 25;
@@ -361,9 +408,9 @@
             // 
             this.customLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.customLabel6.ForeColor = System.Drawing.Color.Black;
-            this.customLabel6.Location = new System.Drawing.Point(24, 10);
+            this.customLabel6.Location = new System.Drawing.Point(6, 1);
             this.customLabel6.Name = "customLabel6";
-            this.customLabel6.Size = new System.Drawing.Size(296, 32);
+            this.customLabel6.Size = new System.Drawing.Size(323, 35);
             this.customLabel6.TabIndex = 23;
             this.customLabel6.Tag = "Left";
             this.customLabel6.Text = "Enable Touchscreen Functionality by Downloading:";
@@ -456,19 +503,17 @@
             // RomKit
             // 
             this.RomKit.BackColor = System.Drawing.Color.White;
-            this.RomKit.Controls.Add(this.customLabel11);
             this.RomKit.Controls.Add(this.RK_ExtractButton);
             this.RomKit.Controls.Add(this.RK_RebuildButton);
             this.RomKit.Controls.Add(this.logger4);
             this.RomKit.Controls.Add(this.status4panel);
-            this.RomKit.Controls.Add(this.RK_HelpButton);
             this.RomKit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.RomKit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.RomKit.Location = new System.Drawing.Point(0, 2);
             this.RomKit.Name = "RomKit";
             this.RomKit.Size = new System.Drawing.Size(332, 297);
             this.RomKit.TabIndex = 9;
-            this.RomKit.Tag = "";
+            this.RomKit.Tag = "Hidden";
             this.RomKit.Text = "Rom-Kit";
             // 
             // RK_ExtractButton
@@ -485,19 +530,6 @@
             this.RK_ExtractButton.UseVisualStyleBackColor = false;
             this.RK_ExtractButton.Visible = false;
             this.RK_ExtractButton.Click += new System.EventHandler(this.materialButton4_Click);
-            // 
-            // customLabel11
-            // 
-            this.customLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.customLabel11.ForeColor = System.Drawing.Color.Black;
-            this.customLabel11.Location = new System.Drawing.Point(3, 1);
-            this.customLabel11.Name = "customLabel11";
-            this.customLabel11.Size = new System.Drawing.Size(329, 240);
-            this.customLabel11.TabIndex = 23;
-            this.customLabel11.Tag = "Left";
-            this.customLabel11.Text = resources.GetString("customLabel11.Text");
-            this.customLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // RK_RebuildButton
             // 
@@ -533,31 +565,6 @@
             this.status4panel.Size = new System.Drawing.Size(654, 2);
             this.status4panel.TabIndex = 7;
             // 
-            // RK_HelpButton
-            // 
-            this.RK_HelpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(202)))), ((int)(((byte)(249)))));
-            this.RK_HelpButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RK_HelpButton.Font = new System.Drawing.Font("Segoe UI Symbol", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RK_HelpButton.ForeColor = System.Drawing.Color.White;
-            this.RK_HelpButton.Location = new System.Drawing.Point(205, 184);
-            this.RK_HelpButton.Margin = new System.Windows.Forms.Padding(0);
-            this.RK_HelpButton.Name = "RK_HelpButton";
-            this.RK_HelpButton.Size = new System.Drawing.Size(69, 26);
-            this.RK_HelpButton.TabIndex = 8;
-            this.RK_HelpButton.Tag = "";
-            this.RK_HelpButton.Text = "Tutorial";
-            this.RK_HelpButton.UseVisualStyleBackColor = false;
-            this.RK_HelpButton.Visible = false;
-            this.RK_HelpButton.Click += new System.EventHandler(this.RK_HelpButton_Click);
-            // 
-            // separator3
-            // 
-            this.separator3.Location = new System.Drawing.Point(323, 36);
-            this.separator3.Name = "separator3";
-            this.separator3.Size = new System.Drawing.Size(329, 6);
-            this.separator3.TabIndex = 6;
-            this.separator3.Text = "separator3";
-            // 
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.White;
@@ -567,7 +574,7 @@
             this.tabPage8.Location = new System.Drawing.Point(0, 2);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(338, 297);
+            this.tabPage8.Size = new System.Drawing.Size(332, 297);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Tag = "";
             this.tabPage8.Text = "tabPage8";
@@ -1310,7 +1317,7 @@
             this.Hidden5.Location = new System.Drawing.Point(0, 2);
             this.Hidden5.Name = "Hidden5";
             this.Hidden5.Padding = new System.Windows.Forms.Padding(3);
-            this.Hidden5.Size = new System.Drawing.Size(338, 297);
+            this.Hidden5.Size = new System.Drawing.Size(332, 297);
             this.Hidden5.TabIndex = 5;
             this.Hidden5.Tag = "Hidden";
             this.Hidden5.Text = "tabPage6";
@@ -1323,7 +1330,7 @@
             this.Hidden6.Location = new System.Drawing.Point(0, 2);
             this.Hidden6.Name = "Hidden6";
             this.Hidden6.Padding = new System.Windows.Forms.Padding(3);
-            this.Hidden6.Size = new System.Drawing.Size(338, 297);
+            this.Hidden6.Size = new System.Drawing.Size(332, 297);
             this.Hidden6.TabIndex = 6;
             this.Hidden6.Tag = "Hidden";
             this.Hidden6.Text = "tabPage7";
@@ -1335,10 +1342,18 @@
             this.Hidden7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Hidden7.Location = new System.Drawing.Point(0, 2);
             this.Hidden7.Name = "Hidden7";
-            this.Hidden7.Size = new System.Drawing.Size(338, 297);
+            this.Hidden7.Size = new System.Drawing.Size(332, 297);
             this.Hidden7.TabIndex = 8;
             this.Hidden7.Tag = "Hidden";
             this.Hidden7.Text = "Hidden7";
+            // 
+            // separator3
+            // 
+            this.separator3.Location = new System.Drawing.Point(323, 36);
+            this.separator3.Name = "separator3";
+            this.separator3.Size = new System.Drawing.Size(329, 6);
+            this.separator3.TabIndex = 6;
+            this.separator3.Text = "separator3";
             // 
             // pctSurface
             // 
@@ -1352,21 +1367,6 @@
             this.pctSurface.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pctSurface_MouseDown);
             this.pctSurface.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pctSurface_MouseMove);
             this.pctSurface.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pctSurface_MouseUp);
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.linkLabel4.LinkColor = System.Drawing.Color.DarkTurquoise;
-            this.linkLabel4.Location = new System.Drawing.Point(42, 193);
-            this.linkLabel4.MinimumSize = new System.Drawing.Size(0, 6);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(208, 15);
-            this.linkLabel4.TabIndex = 28;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "InputRedirection Client by Kazo";
-            this.linkLabel4.VisitedLinkColor = System.Drawing.Color.Teal;
             // 
             // MainForm
             // 
@@ -1447,7 +1447,6 @@
         public System.Windows.Forms.PictureBox pctSurface;
         private System.Windows.Forms.TabPage RomKit;
         private MaterialButton RK_ExtractButton;
-        private CustomLabel customLabel11;
         private MaterialButton RK_RebuildButton;
         private CustomLabel logger4;
         private System.Windows.Forms.Panel status4panel;
@@ -1521,6 +1520,7 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.LinkLabel linkLabel4;
+        private CustomLabel customLabel4;
     }
 }
 

@@ -19,7 +19,6 @@ namespace kit_kat
         [STAThread]
         static void Main()
         {
-
             viewer = new NTR();
             ir = new NTR();
 
@@ -96,7 +95,7 @@ namespace kit_kat
             {
                 System.Net.NetworkInformation.Ping ping = new System.Net.NetworkInformation.Ping();
                 ping.Send("google.com");
-                return true;
+                return false;
             }
             catch
             {

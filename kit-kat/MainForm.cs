@@ -653,7 +653,7 @@ namespace kit_kat
         private void materialButton1_Click(object sender, EventArgs e) { Process.Start("https://www.youtube.com/watch?v=VYJcxlGz02w"); }
         private void materialButton2_Click(object sender, EventArgs e) { Process.Start("https://www.youtube.com/watch?v=PFaac9DmPQo"); }
         private void materialButton5_Click(object sender, EventArgs e) { Process.Start("https://gbatemp.net/threads/how-to-use-input-redirection-on-kit-kat.455233"); }
-        private void RK_HelpButton_Click(object sender, EventArgs e) { Process.Start("https://gbatemp.net/threads/how-to-use-rom-kit-from-kit-kat-to-extract-rebuild-3ds-and-cia-files.456630"); }
+        private void RK_HelpButton_Click(object sender, EventArgs e) { Process.Start("https://gameincanada.blogspot.ca/p/kit-kat-touch.html"); }
         #endregion
         #region ExtractButton
         private void materialButton4_Click(object sender, EventArgs e)
@@ -1330,6 +1330,7 @@ namespace kit_kat
             }
         }
         #endregion
-        }
+           }
     }
+    
     
